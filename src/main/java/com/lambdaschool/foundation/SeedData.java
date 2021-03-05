@@ -153,19 +153,6 @@ public class SeedData
          * Seed Recipes
          ************/
 
-//        Author a1 = new Author("John", "Mitchell");
-//        Author a2 = new Author("Dan", "Brown");
-//        Author a3 = new Author("Jerry", "Poe");
-//        Author a4 = new Author("Wells", "Teague");
-//        Author a5 = new Author("George", "Gallinger");
-//        Author a6 = new Author("Ian", "Stewart");
-
-//        a1 = authorService.save(a1);
-//        a2 = authorService.save(a2);
-//        a3 = authorService.save(a3);
-//        a4 = authorService.save(a4);
-//        a5 = authorService.save(a5);
-//        a6 = authorService.save(a6);
 
         Category c1 = new Category("French");
         Category c2 = new Category("Japanese");
