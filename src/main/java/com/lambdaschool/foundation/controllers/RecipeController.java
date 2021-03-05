@@ -43,7 +43,7 @@ public class RecipeController
                 HttpStatus.OK);
     }
 
-    // http://localhost:2019/books/book/{bookId}
+
     @GetMapping(value = "/recipe/{recipeid}",
             produces = {"application/json"})
     public ResponseEntity<?> getRecipeById(HttpServletRequest request,
@@ -55,7 +55,7 @@ public class RecipeController
                 HttpStatus.OK);
     }
 
-    // POST http://localhost:2019/books/book
+
     @PostMapping(value = "/recipe", consumes = "application/json")
     public ResponseEntity<?> addNewRecipe(@Valid @RequestBody Recipe newRecipe) throws
             URISyntaxException
@@ -63,7 +63,7 @@ public class RecipeController
         newRecipe.setRecipeid(0);
         newRecipe = recipeService.save(newRecipe);
 
-        // set the location header for the newly created resource
+
         HttpHeaders responseHeaders = new HttpHeaders();
         URI newRecipeURI = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{recipeid}")
@@ -76,7 +76,6 @@ public class RecipeController
                 HttpStatus.CREATED);
     }
 
-    // PUT http://localhost:2019/books/book/1
     @PutMapping(value = "/recipe/{recipeid}",
             consumes = "application/json")
     public ResponseEntity<?> updateFullRecipe(
@@ -92,7 +91,6 @@ public class RecipeController
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    // DELETE http://localhost:2019/books/book/1
     @DeleteMapping(value = "/recipe/{id}")
     public ResponseEntity<?> deleteRecipeById(
             @PathVariable
