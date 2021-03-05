@@ -183,13 +183,13 @@ public class SeedData
         Recipe rp1 = new Recipe("Cassoulet", "France", "6 Duck Legs, 3tbps kosher salt, spring thyme, 4 garlic cloves,...+more", "Step1: CureDuckLegs, Step2: spice rub legs, Step3: do the rest", c1);
         rp1 = recipeService.save(rp1);
 
-        Recipe rp2 = new Recipe("Hoto", "Japan", "Tofu-kabocha-carrots-negi-daikon-potato-napa-cabbage-seasonal-veggies-more", "Step1: Dashi, Step2: Mix Hoto, Step3: do the rest", c2);
+        Recipe rp2 = new Recipe("Hoto", "Japan", "Tofu, kabocha, carrots, negi, daikon, potato, napacabbage, seasonal, veggies, more", "Step1: Dashi, Step2: Mix Hoto, Step3: do the rest", c2);
         rp2 = recipeService.save(rp2);
 
         Recipe rp3 = new Recipe("Xiaolongbao", "China", "Pork Aspic, Dough stuff, pork filling,...+more", "Step1: Assemble, Step2: Steam, Step3: do the rest", c3);
         rp3 = recipeService.save(rp3);
 
-        Recipe rp4 = new Recipe("Fideua", "Spanish", "Squid, Pasta, olive oil, prawns,...+more", "Step1: Pasta, Step2: Squid n Prawn fry, Step3: do the rest", c4);
+        Recipe rp4 = new Recipe("Fideua", "Spain", "Squid, Pasta, olive oil, prawns,...+more", "Step1: Pasta, Step2: Squid n Prawn fry, Step3: do the rest", c4);
         rp4 = recipeService.save(rp4);
 
         Recipe rp5 = new Recipe("Veal Milanese", "Italy", "4 eggs, a truck of basil, veal scallopine, bread crumbs,...+more", "Step1: preheat oven, Step2: spice the veal, Step3: do the rest", c5);

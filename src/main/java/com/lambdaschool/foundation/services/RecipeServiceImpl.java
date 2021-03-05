@@ -12,14 +12,9 @@ import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
-import java.util.ArrayList;
-import java.util.List;
+
+
 
 @Transactional
 @Service("recipeService")
@@ -35,8 +30,6 @@ public class RecipeServiceImpl
     @Autowired
     CategoryService categoryService;
 
-//    @Autowired
-//    AuthorRepository authorrepos;
 
     @Override
     public List<Recipe> findAll()
@@ -85,24 +78,13 @@ public class RecipeServiceImpl
         newRecipe.setSource(recipe.getSource());
         newRecipe.setIngredients(recipe.getIngredients());
         newRecipe.setInstructions(recipe.getInstructions());
-//        newRecipe.setCopy(recipe.getCopy());
+
         if (recipe.getCategory() != null)
         {
             newRecipe.setCategory(categoryService.findCategoryById(recipe.getCategory()
                     .getCategoryid()));
         }
 
-//        newBook.getWrotes()
-//                .clear();
-//        for (Wrote w : book.getWrotes())
-//        {
-//            Author addAuthor = authorrepos.findById(w.getAuthor()
-//                    .getAuthorid())
-//                    .orElseThrow(() -> new ResourceNotFoundException("Author Id " + w.getAuthor()
-//                            .getAuthorid() + " Not Found!"));
-//            newBook.getWrotes()
-//                    .add(new Wrote(addAuthor, newBook));
-//        }
         return reciperepos.save(newRecipe);
     }
 
@@ -139,21 +121,6 @@ public class RecipeServiceImpl
                     .getCategoryid()));
         }
 
-//        if (recipe.getWrotes()
-//                .size() > 0)
-//        {
-//            currentBook.getWrotes()
-//                    .clear();
-//            for (Wrote w : book.getWrotes())
-//            {
-//                Author addAuthor = authorrepos.findById(w.getAuthor()
-//                        .getAuthorid())
-//                        .orElseThrow(() -> new ResourceNotFoundException("Author Id " + w.getAuthor()
-//                                .getAuthorid() + " Not Found!"));
-//                currentBook.getWrotes()
-//                        .add(new Wrote(addAuthor, currentBook));
-//            }
-//        }
 
         return reciperepos.save(currentRecipe);
     }
